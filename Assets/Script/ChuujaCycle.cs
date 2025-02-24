@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ChuujaCycle : MonoBehaviour {
 	public Light Taijou;
-	public int GameTime = 720;		//←マックスは1439(24*60-1)
+	public int GameTime = 720;      //←マックスは1439(24*60-1)
 
 	void Start() {
 		StartCoroutine(UpdateTime());
@@ -17,7 +17,7 @@ public class ChuujaCycle : MonoBehaviour {
 
 			//太陽をブン回せ(1年の進捗を求める時に使った式)
 			float TaijouAngle = (GameTime / 1440f) * 360f;
-			Taijou.transform.rotation = Quaternion.Euler(TaijouAngle - 90, 0, 0);
+			Taijou.transform.rotation = Quaternion.Euler(TaijouAngle - 90, -30, 0);
 		}
 	}
 
